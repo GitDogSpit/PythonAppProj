@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/mystyle.css">
+    <title>This is a form demo!</title>
+</head>
+
+<form method="post">
+    Enter your name: <input name= "name"/>
+    <br/>
+    <button type="submit">Submit post</button>
+</form>
+
+<form method="post">
+    Enter your comment: <input name= "message"/>
+    <br/>
+    <button type="submit">Submit comment</button>
+</form>
+
+<div class="content">
+    {% for content in comments %}
+      <p>{{content}}</p>
+    {% endfor %}
+</div>
+
+{% if name != None %}
+    <div class= "content">
+        <p>Hello, {{name}}! Would you like to sign up to win a free iPhone XS max?</p>
+        <p>Enter your email here to enter!</p>
+    </div>
+{% endif %}

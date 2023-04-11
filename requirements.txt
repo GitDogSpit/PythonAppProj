@@ -1,0 +1,7 @@
+Package      Version
+------------ -------
+distlib      0.3.6
+filelock     3.9.0
+pip          23.0.1
+platformdirs 3.0.0
+virtualenv   20.20.0
