@@ -1,1 +1,2 @@
 I deleted the Templates folder from github so that I can reupload and have it as templates, as it is on my actual computer.
+it not uploading the new templates folder   
