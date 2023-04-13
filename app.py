@@ -15,7 +15,7 @@ def writeDetails(filename, message):
 def hello():
     name = "Myname"
     aboutMe = readDetails('static/details.txt')
-    return render_template('templates/homepage.html')
+    return render_template('homepage.html')
 
 #@app.route("/links")
 #def anotherPage():#type slash links to go to this after IP
@@ -27,7 +27,7 @@ def hello():
 
 @app.route("/moist")
 def page():
-    return render_template('templates/moist.html')
+    return render_template('moist.html')
 
 @app.route('/form', methods=['GET', 'POST'])#get post means read and write
 def formDemo():
@@ -40,7 +40,7 @@ def formDemo():
         #    name = request.form['name']
         if request.form['message']:
             writeDetails('static/comments.txt', request.form['message'])
-    return render_template('templates/form.html', name=name, aboutMe = [])
+    return render_template('form.html', name=name, aboutMe = [])
 
 if __name__ == "__main__":
     app.run(debug = True)
