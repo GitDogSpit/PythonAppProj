@@ -14,7 +14,7 @@ def writeDetails(filename, message):
 @app.route("/")#im gonna define that should happen here. "When i got to the homepage hello shouod be run"
 def hello():
     name = "Myname"
-    aboutMe = readDetails('static\details.txt')
+    aboutMe = readDetails('static/details.txt')
     return render_template('homepage.html')
 
 #@app.route("/links")
@@ -33,13 +33,13 @@ def page():
 def formDemo():
     name = 'None'
 
-    comments = readDetails('static\comments.txt')
+    comments = readDetails('static/comments.txt')
 
     if request.method == 'POST':
         #if request.form['name']:
         #    name = request.form['name']
         if request.form['message']:
-            writeDetails('static\comments.txt', request.form['message'])
+            writeDetails('static/comments.txt', request.form['message'])
     return render_template('form.html', name=name, aboutMe = [])
 
 if __name__ == "__main__":
