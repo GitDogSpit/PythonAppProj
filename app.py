@@ -15,19 +15,19 @@ def writeDetails(filename, message):
 def hello():
     name = "Myname"
     aboutMe = readDetails('static/details.txt')
-    return render_template('homepage.html')
+    return render_template('Templates/homepage.html')
 
 #@app.route("/links")
 #def anotherPage():#type slash links to go to this after IP
 #    return "<p> This is another page dedicated to links</p> <a href = '/'> Link back to webpage</a>""
 
-@app.route("/video")
-def videoPage():#trying without html, just for testing
-    return "<video width='320' height='240' controls> <source src='static\QuickRender.mp4' type='video/mp4'> </video>"
+#@app.route("/video")
+#def videoPage():#trying without html, just for testing
+#    return "<video width='320' height='240' controls> <source src='static\QuickRender.mp4' type='video/mp4'> </video>"
 
 @app.route("/moist")
 def page():
-    return render_template('moist.html')
+    return render_template('Templates/moist.html')
 
 @app.route('/form', methods=['GET', 'POST'])#get post means read and write
 def formDemo():
@@ -40,7 +40,7 @@ def formDemo():
         #    name = request.form['name']
         if request.form['message']:
             writeDetails('static/comments.txt', request.form['message'])
-    return render_template('form.html', name=name, aboutMe = [])
+    return render_template('Templates/form.html', name=name, aboutMe = [])
 
 if __name__ == "__main__":
     app.run(debug = True)
